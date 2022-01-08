@@ -12,20 +12,19 @@ public class Q2884 {
         int M = sc.nextInt();
         sc.close();
 
-        if (M-45>=0){
-            M = M-45;
-            H--;
-            if(H<0)
-                H=23;
-            System.out.println(H + " " + M);
-        }
-        else{
-            int M1 = 45 - M;
-            M = 60 - M1;
-            H--;
-            if(H<0)
-                H=23;
-            System.out.println(H + " " + M);
+        H *= 60;
+        int HM = H + M;
+
+        if(HM-45>=0){
+            HM -= 45;
+            int h1 = HM/60;
+            int m1 = HM%60;
+            System.out.println(h1 + " " + m1);
+        } else{
+            HM -= 45;
+            int h1 = 23;
+            int m1 = 60 + HM;
+            System.out.println(h1 + " " + m1);
         }
     }
 }
