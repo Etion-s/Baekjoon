@@ -4,7 +4,7 @@ package Part3_For;
 import java.io.*;
 import java.util.StringTokenizer;
 
-public class Q11021 {
+public class Q11021_important {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); // 단순한 생성자
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
