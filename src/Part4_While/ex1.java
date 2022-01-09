@@ -1,7 +1,7 @@
 package Part4_While;
 
+
 import java.io.*;
-import java.util.Scanner;
 import java.util.StringTokenizer;
 
 public class ex1 {
@@ -13,9 +13,11 @@ public class ex1 {
         int T = Integer.parseInt(br.readLine());
 
         for (int i=1; i<=T; i++){
-            st = new StringTokenizer(br.readLine(), " ");
-            bw.write("Case #"+ String.valueOf(i)+": ");
-            bw.write((Integer.parseInt(st.nextToken())+Integer.parseInt(st.nextToken()))+"\n");
+            st = new StringTokenizer(br.readLine());
+            String a = st.nextToken();
+            String b = st.nextToken();
+            bw.write("Case #"+String.valueOf(i)+": ");
+            bw.write(String.valueOf(Integer.parseInt(a)+Integer.parseInt(b)) + "\n");
         }
         br.close();
         bw.flush();
