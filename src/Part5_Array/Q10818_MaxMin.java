@@ -11,16 +11,23 @@ import java.util.StringTokenizer;
 
 public class Q10818_MaxMin {
     public static void main(String[] args) throws IOException {
-        /*BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        //BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));// 출력할것은 버퍼가 아닌 array임으로 삭제
         StringTokenizer st;
 
-        int max =0, min = 1000001;
+        // int max =0, min = 1000001; //sort메소드 사용으로 인한 삭제
         int N = Integer.parseInt(br.readLine());
         int[] array = new int[N];
         st = new StringTokenizer(br.readLine());
+        int index = 0;
+        while(st.hasMoreTokens()){ // .hasMoreTokens메소드는 토큰남아있으면 true, 아니면 false
+            array[index] = Integer.parseInt(st.nextToken());
+            index++;
+        }
+        Arrays.sort(array);
+        System.out.println(array[0]+" "+array[N-1]);
 
-        for (int i=0; i<N; i++){
+        /*for (int i=0; i<N; i++){
             array[i] = Integer.parseInt(st.nextToken());
         }
         for (int i=0; i<N; i++){
@@ -32,20 +39,11 @@ public class Q10818_MaxMin {
                 min = array[i];
         }
         bw.write(String.valueOf(min)+" ");
-        bw.write(String.valueOf(max));
+        bw.write(String.valueOf(max));*/ // sort사용으로 인해 for문을 통한 대입 x
+
 
         br.close();
-        bw.flush();
-        bw.close();*/
-        Scanner sc = new Scanner(System.in);
-        int N = sc.nextInt();
-        int[] array = new int[N];
-        for(int i=0; i<N; i++){
-            int a = sc.nextInt();
-            array[i] = a;
-        }
-        Arrays.sort(array);
-        System.out.println(array[0]+" "+array[N-1]);
+
 
     }
 }
