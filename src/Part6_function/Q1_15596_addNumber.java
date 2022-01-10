@@ -13,7 +13,7 @@ public class Q1_15596_addNumber {
         for (int i=0; i<n; i++){
             a[i] = n+1;
         }
-        
+
     }
 
 }
