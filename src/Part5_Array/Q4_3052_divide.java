@@ -6,8 +6,8 @@ import java.util.Scanner;
 public class Q4_3052_divide {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        ArrayList<Integer> array_divde42 = new ArrayList<>();
-        ArrayList<Integer> array_nonSame = new ArrayList<>();
+        ArrayList<Integer> array_divde42 = new ArrayList<>(); // 42로 나눈 나머지 저장하는 List
+        ArrayList<Integer> array_nonSame = new ArrayList<>(); // 같지 않은 나머지들을 저장하는곳
 
         for (int i=0; i<10; i++){
             array_divde42.add(sc.nextInt()%42);
@@ -17,10 +17,14 @@ public class Q4_3052_divide {
                 array_nonSame.add(array_divde42.get(i));
         }
 
-        //System.out.println(array_nonSame);
         System.out.println(array_nonSame.size());
-
-
+        /*
+        * 16줄 해석 : array_divde42.get(i)를 통해서 42로 나눈 배열의 i값을 챙겨온다. 그리고
+        *           array_nonSame.contains을 통해 해당값이 있으면 true를 리턴한다
+        *           그런데 앞에 !연산자가 있으므로 반전이 된다
+        *           -> 즉 해당 값이 없으면 true가 되서 if문이 동작을 하고 add함수를 통해
+        *              nonSame리스트에 값을 추가한다
+        * */
 
         //=================================================================================================
         //int[] array_10numbers = new int[10]; // 크기가10, 인덱스 번호랑 착오x
